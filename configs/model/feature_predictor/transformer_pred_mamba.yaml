@@ -1,0 +1,20 @@
+name: transformer_predictor
+_target_: framework.model.feature_predictor.transformer_pred_mamba.TransformerPredictor
+latent_dim: 256
+d_state: 128
+d_conv: 4
+num_heads: 8      
+num_layers: 12
+expand: 2
+headdim: 64
+
+
+# name: transformer_predictor
+# _target_: framework.model.feature_predictor.transformer_pred_mamba.TransformerPredictor
+# d_model: 256
+# d_state: 128
+# d_conv: 4
+# expand: 2
+# headdim: 64
+# audio_dim: 1536
+# one_hot_dim: 43

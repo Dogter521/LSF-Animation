@@ -1,0 +1,6 @@
+name: AudioMAE
+_target_: framework.model.feature_extractor.audiomae.AudioMAE
+
+finetune: true
+model_path: "/data/lx22/manba/face/work_25/ProbTalk3D/framework/model/feature_extractor/pretrained/pretrained.pth"
+# output_framerate: 50

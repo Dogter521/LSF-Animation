@@ -1,0 +1,30 @@
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+
+logger_level: INFO
+progress_bar: true
+
+
+video_woA_folder: ${result_folder}/videos_no_audio/
+video_wA_folder: ${result_folder}/renders_vert/
+frames_folder: ${result_folder}/frames/
+
+result_folder: /data/lx22/manba/face/work_25/ProbTalk3D_iden_split/results/generation/vqvae_pred/rxf1act2/0.2/vertex
+# results/evaluation/vqvae_pred/2brach_fusion/0.2_multi/vert
+# result_folder: /data/lx22/manba/face/work_25/ProbTalk3D_iden_split/results/evaluation/vqvae_pred/official_2branch_1/0.2_multi/vert
+audio_folder: ${path.datasets}/mead/wav/
+
+subject_template_path: ${path.datasets}/flame_sample.ply
+
+defaults:
+  - logger: none
+  - /path@path
+  - override hydra/job_logging: rich    # custom
+  - override hydra/hydra_logging: rich  # custom
+  - _self_
+
+
+
+

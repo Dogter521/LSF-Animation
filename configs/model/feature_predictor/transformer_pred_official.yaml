@@ -1,0 +1,12 @@
+# transformer_pred_official.yaml
+name: transformer_predictor
+
+# 确保路径正确，且与 Python 文件和类名对应
+_target_: framework.model.feature_predictor.transformer_pred_official.TransformerPredictor
+
+# Transformer 模型的超参数，根据模型实现需要调整
+latent_dim: 256            # 输入特征的维度
+num_layers: 12             # Transformer 层数
+num_heads: 8               # 多头注意力机制的头数
+intermediate_size: 384     # 前馈层隐藏维度
+quant_factor: 0            # 量化因子，若无特殊要求，保持 0
